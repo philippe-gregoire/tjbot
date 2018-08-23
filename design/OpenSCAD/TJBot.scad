@@ -16,7 +16,7 @@
 * Date 			Author				Description
 * 2017-10-20	Philippe Gregoire	Initial design for the TJ Bot Head
 * 2018-04-26	Philippe Gregoire	Optional SenseHat aperture
-* 2018-04-26	Franck Descollonges	Extra height for SenseHat (4mm) (see _fd_ comments)
+* 2018-08-23	Franck Descollonges	Extra height for SenseHat (4mm) (see _fd_ comments)
 */
 
 //// The various parts of the robot are each coded in their own module
