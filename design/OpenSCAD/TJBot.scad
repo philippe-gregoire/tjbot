@@ -148,9 +148,9 @@ module tjbot_13_head(
 						translate([w/2+x,ez])
 							cylinder(d=ed,h=th);
 				} else if(a==1) { // right side, slit for arm
-					translate([ao-aw/2,h-ah]) //_fd_:added 4mn for extra height
-						cube([aw,ah,th]); //_fd_:added 4mn for extra height
-					translate([ao,h-ah]) //_fd_:added 4mn for extra height
+					translate([ao-aw/2,h-ah]) 
+						cube([aw,ah,th]); 
+					translate([ao,h-ah]) 
 						cylinder(d=aw,h=th);	
 				} else if(a==2) { // Back side, speaker hole
 					translate([w/2,sZ])
