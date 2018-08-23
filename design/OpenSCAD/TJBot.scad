@@ -16,6 +16,7 @@
 * Date 			Author				Description
 * 2017-10-20	Philippe Gregoire	Initial design for the TJ Bot Head
 * 2018-04-26	Philippe Gregoire	Optional SenseHat aperture
+* 2018-08-23	Franck Descollonges	Extra height for SenseHat (4mm) (see _fd_ comments)
 */
 
 //// The various parts of the robot are each coded in their own module
@@ -28,7 +29,7 @@ _thickness=2;
 
 // Head dimensions
 _headSide=_thickness*2 + 100;
-_headHeight=_thickness + 75;
+_headHeight=_thickness + 75 + 4; //_fd_:added 4mn Extra heightfor SenseHat
 
 // LED Hole. Placed at the center of the head's top
 _LEDHoleDiam=9.98;
@@ -62,7 +63,7 @@ _style="SenseHat";
 // Eyes dimensions
 _eyeDiam=12;
 _eyeSpacing=_eyeDiam+34;
-_eyeZ=62;
+_eyeZ=62+4; //_fd_: 4mn ofset for eyes
 
 // Speaker
 _speakerDiam=55;
@@ -70,7 +71,7 @@ _speakerZ=41.6;
 
 // Side slit for arm
 _armSlitWidth=14;
-_armSlitHeight=49.3;
+_armSlitHeight=53.3;
 _armSlitOffset=30.3;
 
 /* Helper module to place SenseHat components */
@@ -147,9 +148,9 @@ module tjbot_13_head(
 						translate([w/2+x,ez])
 							cylinder(d=ed,h=th);
 				} else if(a==1) { // right side, slit for arm
-					translate([ao-aw/2,h-ah])
-						cube([aw,ah,th]);
-					translate([ao,h-ah])
+					translate([ao-aw/2,h-ah]) 
+						cube([aw,ah,th]); 
+					translate([ao,h-ah]) 
 						cylinder(d=aw,h=th);	
 				} else if(a==2) { // Back side, speaker hole
 					translate([w/2,sZ])
